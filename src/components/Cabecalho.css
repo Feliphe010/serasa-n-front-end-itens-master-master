@@ -1,0 +1,44 @@
+header {
+    height: 100px;
+    background-color: #6ea4d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > span {
+    font-size: 26px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+h1 {
+    background-color: #ffffff;
+}
+
+
+h2{ background-color: #ffffff;}
+
+h3{ background-color: #ffffff;}
+
+ul{ background-color: #ffffff;}
+
+
+
+img { background-color: #ffffff}
+
+nav{ background-color: #ffffff;}
+
+label {background-color: #ffffff;}
+
+form {background-color: #ffffff;}
+
+main {background-color: #ffffff;}
+
+
+label {font-weight: bold}
+
+head {background-color: #ffffff;}
+
+body {background-color: #ffffff;}
+

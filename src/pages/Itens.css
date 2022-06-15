@@ -1,0 +1,49 @@
+section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: #ffffff
+
+}
+
+p {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color:#ffffff;
+}
+
+img { 
+    border-radius: 18px
+ 
+}
+H1 { text-align: center }
+
+div { text-align: center }
+
+label {
+    background-color: #ffffff; 
+    min-height: 9vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(4px + 1.6vmin);
+    color: rgb(0, 0, 0); 
+    
+ 
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+form {  
+    width: 1900px;
+    display: flex;
+    flex-direction: column;
+}
+
+

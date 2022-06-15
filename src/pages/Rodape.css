@@ -1,0 +1,18 @@
+section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: left;
+    background-color: #ffffff
+
+}
+
+p {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: left;
+    background-color: #ffffff
+}
+
+img {
+    border-radius: 18px
+}
