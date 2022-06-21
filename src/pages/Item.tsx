@@ -1,8 +1,9 @@
 const ItemPage = function() {
     return (
-        <>
-            <h1>item</h1>
-        </>
+        
+            <h1>PROXIMA PAGINA</h1>
+            
+        
     );
 };
 

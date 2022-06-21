@@ -3,6 +3,7 @@ import Botao from '../components/Botao';
 import Cabecalho from '../components/Cabecalho';
 import Rodape from '../components/Rodape';
 import Pag from '../inicio/inicio';
+import ItemPage from './Item';
 import './Itens.css';
 
 
@@ -12,6 +13,8 @@ import './Itens.css';
 
             Inicial,
             criar,
+            login,
+            mudar,
 
     }
 
@@ -25,6 +28,18 @@ import './Itens.css';
         setEstado(Estado.criar);
         };
 
+        const botaoLoginClicado = function () {
+            setEstado(Estado.login);
+            };
+
+        const botaoLoginMudar = function () {
+            setEstado(Estado.mudar);
+            };
+
+        const botaoLoginCancelar = function () {
+            setEstado(Estado.Inicial);
+               };
+
         const botaoSalvarClicado = function () {
         setEstado (Estado.Inicial);
         };
@@ -32,8 +47,9 @@ import './Itens.css';
         const botaoCriarCancelar = function () {
         setEstado (Estado.Inicial);
 
+
         const botaoCriarClicado = function () {
-        setEstado (Estado.Inicial);
+            setEstado (Estado.Inicial);
         };
 
         
@@ -49,7 +65,7 @@ import './Itens.css';
             <Cabecalho />
 
 
-                <main>
+                <main className='main'>
 
                     <nav>
                     
@@ -86,7 +102,7 @@ import './Itens.css';
                 <div>
                 
                 {(estado === Estado.Inicial) && (
-                    <Botao texto= 'LOGIN' click={botaoCriarClicado}/>
+                    <Botao texto= 'LOGIN' click={botaoLoginClicado}/>
                 )}
 
                 </div>
@@ -95,7 +111,7 @@ import './Itens.css';
 
                 {(estado === Estado.criar) && (
                     
-                    <form className="item">
+                    <form className="item, box">
 
                    
             
@@ -105,7 +121,7 @@ import './Itens.css';
                             Nome:
                            
                             
-                            <input type="text" placeholder="Digite seu nome" />
+                            <input required type="text" placeholder="Digite seu nome" />
                         
                         </label>
 
@@ -115,14 +131,14 @@ import './Itens.css';
                             Email:
                            
                             
-                            <input type="email" placeholder="Digite seu email" />
+                            <input required type="email" placeholder="Digite seu email" />
 
                         </label>
 
                         <label>
                             Data de nascimento:
 
-                            <input type="date" placeholder="Digite a sua data de nascimento" />
+                            <input required type="date" placeholder="Digite a sua data de nascimento"/>
 
                         </label>
 
@@ -131,38 +147,76 @@ import './Itens.css';
                             Telefone:
                            
                             
-                            <input type="phone" placeholder="Digite seu telefone" />
+                            <input required minLength={11} type="phone" placeholder="Digite seu telefone" />
 
                         </label>
 
                         <label>
                             Senha:
                         
-                            <input type='password' placeholder="Crie uma senha"></input>
+                            <input required minLength={8} type='password' placeholder="Crie uma senha"/>
                         
                         </label>
                         
                         <label>
-                 Confirme a senha:
+                            
+                            Confirme a senha:
 
-                            <input type='password' placeholder="confirme a senha"></input>
+                            <input required minLength={8} type='password' placeholder="confirme a senha"/>
 
                         </label>
 
                         <div className='botoes'>
-                        
-                            <Botao texto="Cadastre-se" click={botaoSalvarClicado} /> 
+                         
                         
                             <Botao texto="Voltar" click= {botaoCriarCancelar} />
                             
-                            <Botao texto="Login" click={botaoCriarClicado} />
+                            <Botao texto="Cadastre-se" click={botaoCriarClicado} />
 
                        
                         
                         </div >
 
                     </form>
+                    
                 )}
+
+                {(estado === Estado.login) && ( 
+
+                    <form className='Item, box'>
+           
+                        
+                        <label>
+                            
+                            Email:
+                           
+                            
+                            <input required type="email" placeholder="Digite seu email" />
+
+                        </label>
+
+
+                        <label>
+                            Senha:
+                        
+                            <input required minLength={8} type='password' placeholder="Crie uma senha"/>
+                        
+                        </label>
+                        
+                        <div className='botoes'>
+                        
+                        <Botao texto="Cancelar" click= {botaoLoginCancelar} />
+                        <Botao texto="Login" click= {botaoLoginMudar} />
+                        
+                        </div>
+
+                    </form>
+
+
+                )}
+
+
+              
 
                 </main>
 
