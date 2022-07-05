@@ -2,6 +2,7 @@
 import './inicio.css';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { useState } from 'react';
+import logo from '../content/logo.pet.png';
 
 const Pag = function(){
     
@@ -28,7 +29,7 @@ const Pag = function(){
 
       <>
 
-        <Navbar bg="light" variant="light">
+        <Navbar>
 
           <Container>
 
@@ -36,7 +37,7 @@ const Pag = function(){
 
               <img
                 className="d-20 w-80"
-                src="https://cdn.dribbble.com/users/2468490/screenshots/5579451/pet_logo.jpg" height="41" width="50"
+                src={logo} height="100" width="auto"
        
                />
 
