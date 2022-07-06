@@ -3,35 +3,35 @@ section {
     flex-direction: column-reverse;
     align-items: center;
     background-color: #ffffff
-
 }
 
 p {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    background-color:#ffffff;
 }
 
-img { 
+img {
     border-radius: 18px
- 
 }
-H1 { text-align: center }
 
-div { text-align: center }
+H1 {
+    text-align: center
+}
+
+div {
+    text-align: center
+}
 
 label {
-    background-color: #ffffff; 
+    background-color: #ffffff;
     min-height: 9vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(4px + 1.6vmin);
-    color: rgb(0, 0, 0); 
-    
- 
+    color: rgb(0, 0, 0);
 }
 
 .botoes {
@@ -40,37 +40,32 @@ label {
     column-gap: 8px;
 }
 
-form {  
+form {
     width: 1900px;
     display: flex;
     flex-direction: column;
 }
 
-input{
-
+input {
     padding: 7px;
     width: 300px;
     margin: 5px;
     border-radius: 10px;
-
 }
 
-.box{
-
+.box {
     background: #4682B4;
     padding: 20px;
     margin: 15px;
-    width: 800px ;
+    width: 800px;
     flex-direction: column;
     text-align: center;
     border-radius: 10px;
     box-shadow: 3px 2px 3px rgb(0, 0, 0);
-    
-
 }
 
-.main{
-    display:flex;
+.main {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }

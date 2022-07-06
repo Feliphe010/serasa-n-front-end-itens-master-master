@@ -3,7 +3,7 @@ import './Cabecalho.css';
 const Cabecalho = function() {
     return (    
         <header>
-            <span>PROJETO PETS </span>
+            <span>PROJETO PETS</span>
                    
                      </header> 
     

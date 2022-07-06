@@ -4,24 +4,22 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { useState } from 'react';
 import logo from '../content/logo.pet.png';
 
-const Pag = function(){
+type Props = {
+  logotipoClicado: () => void;
+};
+
+const Pag = function (props: Props){
     
+     
+  enum Estado {
+      Inicial,
+  }
+
   
-        enum Estado {
-
-            Inicial,
-
-        }
-
-            //let estado = 'INICIAL';
-
-            const [estado, setEstado] = useState(Estado.Inicial);
-
-
-            const botaoInicioClicado = function () {
-            setEstado(Estado.Inicial);
-            };  
-
+  
+  const botaoInicioClicado = function () {
+      props.logotipoClicado();
+};
 
   return (
 
@@ -33,7 +31,7 @@ const Pag = function(){
 
           <Container>
 
-            <Navbar.Brand href="#Inicio">
+            <Navbar.Brand onClick={botaoInicioClicado} >
 
               <img
                 className="d-20 w-80"
